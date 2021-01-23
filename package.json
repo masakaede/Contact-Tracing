@@ -7,16 +7,21 @@
   "license": "MIT",
   "scripts": {
     "start": "node server/server.js",
-    "heroku-postbuild": "cd client && yarn --production=false && yarn run build",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build",
     "server": "nodemon server/server.js",
-    "client": "cd client && yarn run start",
-    "dev": "concurrently \"yarn run server\" \"yarn run client\""
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
     "concurrently": "^3.5.1",
+    "cors": "^2.8.5",
     "express": "^4.16.3",
-    "mysql": "^2.15.0"
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.15.0",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.4.0"
   },
   "devDependencies": {
     "nodemon": "^1.17.4"
