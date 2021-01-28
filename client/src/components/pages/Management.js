@@ -1,8 +1,9 @@
-import React from 'react';
+import React from "react";
+import FullList from "../FullList"
 
 const Management = () => (
     <div>
-        <h1>Management</h1>
+        <FullList />
     </div>
 );
 

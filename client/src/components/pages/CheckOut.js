@@ -1,8 +1,9 @@
-import React from 'react';
+import React from "react";
+import List from "../List"
 
 const CheckOut = () => (
     <div>
-        <h1>Check Out</h1>
+        <List />
     </div>
 );
 
