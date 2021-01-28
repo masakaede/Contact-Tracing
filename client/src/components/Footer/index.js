@@ -1,5 +1,5 @@
 import React from "react";
-// import "./style.css";
+import "./style.css";
 import moment from "moment";
 
 const currentTime = moment().format('Do MMMM YYYY');
