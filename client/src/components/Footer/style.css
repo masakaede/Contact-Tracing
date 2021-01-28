@@ -5,11 +5,13 @@
   right: 0;
   bottom: 0;
   width:100%;
-  background: #dbd7d7;
+  background: #DDD6C9;
   text-align: center;
+  border: 1px solid #516151;
+
 }
 
 .footer > span {
-  background: #dbd7d7;
+  background: #DDD6C9;
   font-size: large;
 }
