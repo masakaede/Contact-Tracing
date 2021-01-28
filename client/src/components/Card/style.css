@@ -1,0 +1,25 @@
+.card {
+  border: 1px solid #516151;
+  background-color: #DFE6E7;
+  min-height: 100%;
+  padding-bottom: 100px;
+  }
+  
+  .card-body {
+    margin-left: auto;
+    margin-right:auto;
+    margin-top:30px;
+    margin-bottom:20px;
+    
+    width: 90%;
+    border: 1px solid #516151;
+    border-radius: 5px;
+    background-color: #B4D2D3;
+  }
+
+  .card-text {
+    margin-left: auto;
+    margin-right:auto;
+    width: 100%;
+
+  } 
