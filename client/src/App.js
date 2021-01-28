@@ -1,22 +1,30 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, { Component } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import CheckIn from "./components/pages/CheckIn";
+import CheckOut from "./components/pages/CheckOut";
+import Management from "./components/pages/Management";
+import Navbar from "./components/Navbar"
+import NavTabs from "./components/Navtabs";
+import Footer from "./components/Footer";
+import Wrapper from "./components/Wrapper"
 import './App.css';
 
-class App extends Component {
-
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+function App() {
+  return (
+    <Router>
+      <div>
+        <NavTabs />
+        <Wrapper>
+          <Route exact path="/" component={CheckIn} />
+          <Route exact path="/checkIn" component={CheckIn} />
+          <Route exact path="/checkOut" component={CheckOut} />
+          <Route exact path="/management" component={Management} />
+        </Wrapper>
+        <Footer />
       </div>
-    );
-  }
+    </Router>
+  );
 }
+
 
 export default App;
