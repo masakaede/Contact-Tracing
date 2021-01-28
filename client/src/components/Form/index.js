@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import "./style.css";
 import Card from "../Card"
-import NavTabs from '../NavTabs';
 
 class Form extends Component {
     state = {
@@ -9,7 +8,6 @@ class Form extends Component {
         lastName: "",
         email: "",
         mobile: "",
-        suburb: "",
         postCode: ""
     };
 
@@ -32,8 +30,6 @@ class Form extends Component {
             alert("Fill out your email please!")
         } else if (!this.state.mobile) {
             alert("Fill out your mobile please!")
-        } else if (!this.state.suburb) {
-            alert("Fill out your suburb please!")
         } else if (!this.state.postCode) {
             alert("Fill out your post code please!")
         } else { }
@@ -43,7 +39,6 @@ class Form extends Component {
             lastName: "",
             email: "",
             mobile: "",
-            suburb: "",
             postCode: ""
         });
     };
@@ -53,7 +48,7 @@ class Form extends Component {
             <div>
                 <Card>
                     <p>
-                        Please fill in your contact detail
+                        Please fill out your contact detail
                 </p>
                     <form className="form">
                         <input
@@ -83,13 +78,6 @@ class Form extends Component {
                             onChange={this.handleInputChange}
                             type="integer"
                             placeholder="04xx xxx xxx"
-                        />
-                        <input
-                            value={this.state.suburb}
-                            name="suburb"
-                            onChange={this.handleInputChange}
-                            type="text"
-                            placeholder="Suburb"
                         />
                         <input
                             value={this.state.postCode}
