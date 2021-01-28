@@ -1,0 +1,7 @@
+.nav-tabs {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #AAC8CD;
+}
+
